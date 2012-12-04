@@ -1,14 +1,14 @@
-![status](https://secure.travis-ci.org/wearefractal/APPNAME.png?branch=master)
+![status](https://secure.travis-ci.org/wearefractal/yolo.png?branch=master)
 
 ## Information
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>yolo</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
+<td>Simple wrapper around v8 internals</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -19,12 +19,21 @@
 ## Usage
 
 ```coffee-script
-NOTHING HERE YET
+yolo = require 'yolo'
+
+obj = {}
+
+yolo.sizeof obj # 8 bytes
+
+nobj = yolo.clone obj
+
+yolo.identify obj  # 69345300
+yolo.identify nobj # 23759283
+
+yolo.gc() # runs v8 garbage collector
+
+yolo obj # completely erases obj
 ```
-
-## Examples
-
-You can view more examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
 
 ## LICENSE
 
